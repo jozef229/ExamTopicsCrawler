@@ -1,0 +1,57 @@
+<div __cpp="1" class="card exam-question-card">
+<div __cpp="1" class="card-header text-white bg-primary">
+Question #4
+<span __cpp="1" class="question-title-topic pull-right">
+Topic 1
+</span>
+</div>
+<div __cpp="1" class="card-body question-body" data-id="705743">
+<p __cpp="1" class="card-text">
+
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.<br __cpp="1"/>After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.<br __cpp="1"/>You develop a software as a service (SaaS) offering to manage photographs. Users upload photos to a web service which then stores the photos in Azure<br __cpp="1"/>Storage Blob storage. The storage account type is General-purpose V2.<br __cpp="1"/>When photos are uploaded, they must be processed to produce and save a mobile-friendly version of the image. The process to produce a mobile-friendly version of the image must start in less than one minute.<br __cpp="1"/>You need to design the process that starts the photo processing.<br __cpp="1"/>Solution: Trigger the photo processing from Blob storage events.<br __cpp="1"/>Does the solution meet the goal?<br __cpp="1"/>
+</p>
+<div __cpp="1" class="question-choices-container">
+<div __cpp="1" class="voted-answers-tally d-none">
+<script __cpp="1" id="705743" type="application/json">[{"voted_answers": "B", "vote_count": 3, "is_most_voted": false}]</script>
+</div>
+<ul __cpp="1">
+<li __cpp="1" class="multi-choice-item">
+<span __cpp="1" class="multi-choice-letter" data-choice-letter="A">
+A.
+</span>
+
+Yes
+</li>
+<li __cpp="1" class="multi-choice-item correct-hidden">
+<span __cpp="1" class="multi-choice-letter" data-choice-letter="B">
+B.
+</span>
+
+No
+</li>
+</ul>
+</div>
+<a __cporiginalvalueofhref="#" __cpp="1" class="btn btn-primary reveal-solution d-print-none" href="https://hosteagle.club/exams/microsoft/az-204/view/1/?__cpo=aHR0cHM6Ly93d3cuZXhhbXRvcGljcy5jb20">Reveal Solution</a>
+<a __cporiginalvalueofhref="#" __cpp="1" class="btn btn-primary hide-solution d-none d-print-none" href="https://hosteagle.club/exams/microsoft/az-204/view/1/?__cpo=aHR0cHM6Ly93d3cuZXhhbXRvcGljcy5jb20">Hide Solution</a>
+<a __cporiginalvalueofhref="#" __cpp="1" class="btn btn-secondary question-discussion-button d-print-none" href="https://hosteagle.club/exams/microsoft/az-204/view/1/?__cpo=aHR0cHM6Ly93d3cuZXhhbXRvcGljcy5jb20">
+<i __cpp="1" class="fa fa-comment"></i>
+  Discussion  
+
+<span __cpp="1" class="badge badge-pill badge-light">48</span>
+</a>
+<p __cpp="1" class="card-text question-answer bg-light white-text">
+<span __cpp="1" class="correct-answer-box"><strong __cpp="1">Correct Answer:</strong>
+<span __cpp="1" class="correct-answer">B</span>
+<a __cporiginalvalueofhref="#" __cpp="1" class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="https://hosteagle.club/exams/microsoft/az-204/view/1/?__cpo=aHR0cHM6Ly93d3cuZXhhbXRvcGljcy5jb20" title="">🗳️</a>
+<br __cpp="1"/>
+</span>
+<span __cpp="1" class="answer-description">
+You need to catch the triggered event, so move the photo processing to an Azure Function triggered from the blob upload.<br __cpp="1"/>Note: Azure Storage events allow applications to react to events. Common Blob storage event scenarios include image or video processing, search indexing, or any file-oriented workflow.<br __cpp="1"/>Events are pushed using Azure Event Grid to subscribers such as Azure Functions, Azure Logic Apps, or even to your own http listener.<br __cpp="1"/>However, the processing must start in less than one minute.<br __cpp="1"/>Note: Only storage accounts of kind StorageV2 (general purpose v2) and BlobStorage support event integration. Storage (general purpose v1) does not support integration with Event Grid.<br __cpp="1"/>Reference:<br __cpp="1"/>https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-event-overview
+</span>
+</p><div __cpp="1" class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i __cpp="1">Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div __cpp="1" class="progress vote-distribution-bar"><div __cpp="1" aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div __cpp="1" aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+</div><div __cpp="1" aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+</div><div __cpp="1" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
+</div></div></div>
+</div>
+</div>

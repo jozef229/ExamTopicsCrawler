@@ -1,0 +1,32 @@
+<div __cpp="1" class="card exam-question-card">
+<div __cpp="1" class="card-header text-white bg-primary">
+Question #2
+<span __cpp="1" class="question-title-topic pull-right">
+Topic 1
+</span>
+</div>
+<div __cpp="1" class="card-body question-body" data-id="705741">
+<p __cpp="1" class="card-text">
+
+
+DRAG DROP -<br __cpp="1"/>You are a developer for a software as a service (SaaS) company that uses an Azure Function to process orders. The Azure Function currently runs on an Azure<br __cpp="1"/>Function app that is triggered by an Azure Storage queue.<br __cpp="1"/>You are preparing to migrate the Azure Function to Kubernetes using Kubernetes-based Event Driven Autoscaling (KEDA).<br __cpp="1"/>You need to configure Kubernetes Custom Resource Definitions (CRD) for the Azure Function.<br __cpp="1"/>Which CRDs should you configure? To answer, drag the appropriate CRD types to the correct __cpLocations. Each CRD type may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.<br __cpp="1"/>NOTE: Each correct selection is worth one point.<br __cpp="1"/>Select and Place:<br __cpp="1"/><img __cpp="1" class="in-exam-image" src="https://www.examtopics.com/assets/media/exam-media/03861/0004200001.jpg"/><br __cpp="1"/>
+</p>
+<a __cporiginalvalueofhref="#" __cpp="1" class="btn btn-primary reveal-solution d-print-none" href="https://hosteagle.club/exams/microsoft/az-204/view/1/?__cpo=aHR0cHM6Ly93d3cuZXhhbXRvcGljcy5jb20">Reveal Solution</a>
+<a __cporiginalvalueofhref="#" __cpp="1" class="btn btn-primary hide-solution d-none d-print-none" href="https://hosteagle.club/exams/microsoft/az-204/view/1/?__cpo=aHR0cHM6Ly93d3cuZXhhbXRvcGljcy5jb20">Hide Solution</a>
+<a __cporiginalvalueofhref="#" __cpp="1" class="btn btn-secondary question-discussion-button d-print-none" href="https://hosteagle.club/exams/microsoft/az-204/view/1/?__cpo=aHR0cHM6Ly93d3cuZXhhbXRvcGljcy5jb20">
+<i __cpp="1" class="fa fa-comment"></i>
+  Discussion  
+
+<span __cpp="1" class="badge badge-pill badge-light">9</span>
+</a>
+<p __cpp="1" class="card-text question-answer bg-light white-text">
+<span __cpp="1" class="correct-answer-box"><strong __cpp="1">Correct Answer:</strong>
+<span __cpp="1" class="correct-answer"><img __cpp="1" class="in-exam-image" src="https://www.examtopics.com/assets/media/exam-media/03861/0004300001.jpg"/></span>
+<br __cpp="1"/>
+</span>
+<span __cpp="1" class="answer-description">
+Box 1: Deployment -<br __cpp="1"/>To deploy Azure Functions to Kubernetes use the func kubernetes deploy command has several attributes that directly control how our app scales, once it is deployed to Kubernetes.<br __cpp="1"/><br __cpp="1"/>Box 2: ScaledObject -<br __cpp="1"/>With --polling-interval, we can control the interval used by KEDA to check Azure Service Bus Queue for messages.<br __cpp="1"/>Example of ScaledObject with polling interval<br __cpp="1"/>apiVersion: keda.k8s.io/v1alpha1<br __cpp="1"/>kind: ScaledObject<br __cpp="1"/>metadata:<br __cpp="1"/>name: transformer-fn<br __cpp="1"/>namespace: tt<br __cpp="1"/>labels:<br __cpp="1"/>deploymentName: transformer-fn<br __cpp="1"/>spec:<br __cpp="1"/>scaleTargetRef:<br __cpp="1"/>deploymentName: transformer-fn<br __cpp="1"/>pollingInterval: 5<br __cpp="1"/>minReplicaCount: 0<br __cpp="1"/>maxReplicaCount: 100<br __cpp="1"/><br __cpp="1"/>Box 3: Secret -<br __cpp="1"/>Store connection strings in Kubernetes Secrets.<br __cpp="1"/>Example: to create the Secret in our demo Namespace:<br __cpp="1"/># create the k8s demo namespace<br __cpp="1"/>kubectl create namespace tt<br __cpp="1"/># grab connection string from Azure Service Bus<br __cpp="1"/>KEDA_SCALER_CONNECTION_STRING=$(az servicebus queue authorization-rule keys list \<br __cpp="1"/>-g $RG_NAME \<br __cpp="1"/>--namespace-name $SBN_NAME \<br __cpp="1"/>--queue-name inbound \<br __cpp="1"/>-n keda-scaler \<br __cpp="1"/>--query "primaryConnectionString" \<br __cpp="1"/>-o tsv)<br __cpp="1"/># create the kubernetes secret<br __cpp="1"/>kubectl create secret generic tt-keda-auth \<br __cpp="1"/>--from-literal KedaScaler=$KEDA_SCALER_CONNECTION_STRING \<br __cpp="1"/>--namespace tt<br __cpp="1"/>Reference:<br __cpp="1"/>https://www.thinktecture.com/en/kubernetes/serverless-workloads-with-keda/
+</span>
+</p>
+</div>
+</div>
